@@ -7,6 +7,8 @@ import styled from "styled-components";
 function App() {
   const [quant, setQuant] = useState(0);
   const [popup, setPopup] = useState(false);
+
+
 console.log(popup)
   return  (
 
@@ -43,6 +45,6 @@ const BlackDiv= styled.div`
         display: flex;
         flex-direction: column;
         gap: 3.2rem;
-        
+
 }
 `

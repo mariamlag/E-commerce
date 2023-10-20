@@ -1,5 +1,5 @@
 import  { Dispatch, SetStateAction } from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 interface Popup {
@@ -10,8 +10,28 @@ interface Popup {
 export default function Photos(props: Popup) {
     const pictures =['/assets/images/big-shoes.jpg', '/assets/images/big-shoes2.jpg','/assets/images/big-shoes3.jpg', '/assets/images/big-shoes4.jpg' ];
     const picturesSmall =['/assets/images/small-shoes.jpg', '/assets/images/small-shoes2.jpg','/assets/images/small-shoes3.jpg', '/assets/images/small-shoes4.jpg' ];
-
     const [changeImage, setChangeImage] = useState(0);
+
+
+    const mediaQuery = window.matchMedia('(max-width: 1440px)');
+    
+    const [matches, setMatches] = useState(mediaQuery.matches);
+
+    // Function to update matches when the media query changes
+    const handleMediaQueryChange = (event: { matches: boolean | ((prevState: boolean) => boolean); }) => {
+    setMatches(event.matches);
+    };
+
+    useEffect(() => {
+    // Attach the event listener to the media query
+    mediaQuery.addListener(handleMediaQueryChange);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+        mediaQuery.removeListener(handleMediaQueryChange);
+    };
+    }, [mediaQuery]);
+    
 
     const handleNext = () => {
         setChangeImage((prevImage) => (prevImage + 1) % pictures.length);
@@ -23,19 +43,19 @@ export default function Photos(props: Popup) {
     return (
         <>
         <Body>
-            {props.popup ?  <ButtonPrev onClick={handleNext}>
-                <img src="/assets/images/icon-previous.svg" alt="" />
-            </ButtonPrev> : null}
-           
-
+        {matches || props.popup ? (
+            <ButtonPrev onClick={handleNext}>
+            <img src="/assets/images/icon-previous.svg" alt="" />
+            </ButtonPrev>
+            ) : null}
             {props.popup ?  <CloseIcon src='/assets/images/icon-close.svg' onClick={() => props.setPopup(false)}>
-                </CloseIcon> : null}
+                </CloseIcon> : null }
+
             <ImageContainer onClick={() => props.setPopup(true)}>
-               
-               
                 <Img src={pictures[changeImage]} alt="sneaker-shoe" />
             </ImageContainer>
-            {props.popup ?  <ButtonNext onClick={handlePrev}>
+
+            {props.popup || matches ?  <ButtonNext onClick={handlePrev}>
                 <img src="/assets/images/icon-next.svg" alt="" />
             </ButtonNext> : null}
            
@@ -135,11 +155,8 @@ const ButtonNext = styled.button`
     border-style: none;
     @media (min-width: ${breakpoints.large}){
         top: -26.4rem;
-    right: -19.3rem;
-
+        right: -19.3rem;
     }
-
-
 `
 const ButtonPrev =styled.button`
     position: relative;
@@ -151,7 +168,7 @@ const ButtonPrev =styled.button`
     border-style: none;
     @media (min-width: ${breakpoints.large}){
         top: 33rem;
-    right: 19rem;
+        right: 19rem;
     }
   
 `
