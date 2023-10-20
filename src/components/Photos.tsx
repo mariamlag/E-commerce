@@ -132,6 +132,7 @@ const Body = styled.div`
         margin-top: 9rem;
         margin-left: 12rem;
         flex-direction: column;
+        gap: 3rem;
 }
 `
 const ImageContainer = styled.div`
@@ -158,7 +159,7 @@ const ButtonNext = styled.button`
         transition: background-color 0.3s, color 0.3s, transform 0.2s; 
     }
     @media (min-width: ${breakpoints.large}){
-        top: -22.4rem;
+        top: -26.4rem;
         right: -19.3rem;
     }
 `
@@ -176,8 +177,8 @@ const ButtonPrev =styled.button`
         transition: background-color 0.3s, color 0.3s, transform 0.2s; 
     }
     @media (min-width: ${breakpoints.large}){
-        top: 26.3rem;
-        right: 19.4rem;
+        top: 29rem;
+        right: 19rem;
     }
   
 `

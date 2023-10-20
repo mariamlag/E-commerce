@@ -44,7 +44,6 @@ const BlackDiv= styled.div`
         height: 100vh;
         display: flex;
         flex-direction: column;
-        gap: 3.2rem;
-
+        
 }
 `
