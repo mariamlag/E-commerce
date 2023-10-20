@@ -165,7 +165,7 @@ const Container = styled.div`
     justify-content: center;
     z-index: 1;
     @media (min-width: ${breakpoints.large}) {
-        right: 2%;
+        right: -4rem;
         left: auto;
     }
   

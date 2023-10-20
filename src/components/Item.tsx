@@ -281,6 +281,7 @@ const Main = styled.div`
     flex-direction: column;
     padding: 2.4rem;
     @media (min-width: ${breakpoints.large}) {
+        margin-right: 5rem;
         float: right;
         padding-top: 15.2rem;
         width: 44.4rem;

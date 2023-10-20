@@ -130,9 +130,9 @@ const Body = styled.div`
     @media (min-width: ${breakpoints.large}) {
         float: left;
         margin-top: 9rem;
-        margin-left: 12rem;
         flex-direction: column;
         gap: 3rem;
+        margin-left: 4.8rem;
 }
 `
 const ImageContainer = styled.div`
