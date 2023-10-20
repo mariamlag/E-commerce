@@ -41,7 +41,7 @@ const BlackDiv= styled.div`
         top: 0;
         left: 0;
         width: 100vw;
-        height: 100%;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         gap: 3.2rem;

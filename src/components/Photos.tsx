@@ -43,13 +43,14 @@ export default function Photos(props: Popup) {
     return (
         <>
         <Body>
-        {matches || props.popup ? (
+            {props.popup ?  <CloseIcon src='/assets/images/icon-close.svg' onClick={() => props.setPopup(false)}>
+            </CloseIcon> : null }
+
+            {matches || props.popup ? (
             <ButtonPrev onClick={handleNext}>
             <img src="/assets/images/icon-previous.svg" alt="" />
             </ButtonPrev>
             ) : null}
-            {props.popup ?  <CloseIcon src='/assets/images/icon-close.svg' onClick={() => props.setPopup(false)}>
-                </CloseIcon> : null }
 
             <ImageContainer onClick={() => props.setPopup(true)}>
                 <Img src={pictures[changeImage]} alt="sneaker-shoe" />
@@ -59,7 +60,6 @@ export default function Photos(props: Popup) {
                 <img src="/assets/images/icon-next.svg" alt="" />
             </ButtonNext> : null}
            
-
             <SmallImagesContainer>
                 {picturesSmall.map((photo, index) => {
                     return ( 
@@ -132,7 +132,6 @@ const Body = styled.div`
         margin-top: 9rem;
         margin-left: 12rem;
         flex-direction: column;
-        gap: 3.2rem;
 }
 `
 const ImageContainer = styled.div`
@@ -159,7 +158,7 @@ const ButtonNext = styled.button`
         transition: background-color 0.3s, color 0.3s, transform 0.2s; 
     }
     @media (min-width: ${breakpoints.large}){
-        top: -26.4rem;
+        top: -22.4rem;
         right: -19.3rem;
     }
 `
@@ -177,8 +176,8 @@ const ButtonPrev =styled.button`
         transition: background-color 0.3s, color 0.3s, transform 0.2s; 
     }
     @media (min-width: ${breakpoints.large}){
-        top: 33rem;
-        right: 19rem;
+        top: 26.3rem;
+        right: 19.4rem;
     }
   
 `
