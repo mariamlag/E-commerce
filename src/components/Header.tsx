@@ -164,10 +164,8 @@ const BurgerMenu = styled.nav `
     background-color: white;
     padding: 2.4rem 2.5rem; 
     gap: 1.6rem;
-    top: 0;
-    
-   
-
+    top: 0;  
+    z-index: 1;
 `;
 const ListText = styled.p`
     color: #1D2026;
