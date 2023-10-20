@@ -147,12 +147,17 @@ const ImageContainer = styled.div`
 `
 const ButtonNext = styled.button`
     position: relative;
+    cursor: pointer;
     right: 5rem;
     width: 40px;
     height: 40px;
     flex-shrink: 0;
     border-radius: 50%;
     border-style: none;
+    &:hover {
+        transform: scale(1.1); /* Scale the button slightly on hover */
+        transition: background-color 0.3s, color 0.3s, transform 0.2s; 
+    }
     @media (min-width: ${breakpoints.large}){
         top: -26.4rem;
         right: -19.3rem;
@@ -160,12 +165,17 @@ const ButtonNext = styled.button`
 `
 const ButtonPrev =styled.button`
     position: relative;
+    cursor: pointer;
     right: -5rem;
      width: 40px;
     height: 40px;
     flex-shrink: 0;
     border-radius: 50%;
     border-style: none;
+    &:hover {
+        transform: scale(1.1); /* Scale the button slightly on hover */
+        transition: background-color 0.3s, color 0.3s, transform 0.2s; 
+    }
     @media (min-width: ${breakpoints.large}){
         top: 33rem;
         right: 19rem;

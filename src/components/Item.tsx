@@ -104,6 +104,9 @@ const OrangeButton = styled.button`
     margin-top: 1.6rem;
     &:hover {
         opacity: 0.75;
+        
+        transition: background-color 0.3s, color 0.3s, transform 0.2s; 
+    
     }
     @media (min-width: ${breakpoints.large}) {
         width: 27.2rem;
@@ -127,6 +130,10 @@ const Button = styled.button`
     align-items: center;
     border-style: hidden;
     cursor: pointer;
+    &:hover {
+        transform: scale(1.1); /* Scale the button slightly on hover */
+        transition: background-color 0.3s, color 0.3s, transform 0.2s; 
+    }
 
 `
 const ButtonDiv = styled.button`

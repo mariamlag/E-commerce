@@ -165,6 +165,8 @@ const BurgerMenu = styled.nav `
     padding: 2.4rem 2.5rem; 
     gap: 1.6rem;
     top: 0;
+    
+   
 
 `;
 const ListText = styled.p`
@@ -196,6 +198,9 @@ const BurgerIcon = styled.img`
     width: 1.6rem;
     height: 1.5rem;
     cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+    }
     @media (min-width: ${breakpoints.large}) {
         display: none;
 }
