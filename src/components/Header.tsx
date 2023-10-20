@@ -102,7 +102,7 @@ const Li = styled.li`
     list-style: none;
     cursor: pointer;
     padding-bottom: 4rem;
-    :hover{
+    &:hover{
         border-bottom:  4px solid rgba(255, 126, 27, 1);
     }
 `
@@ -165,9 +165,6 @@ const BurgerMenu = styled.nav `
     padding: 2.4rem 2.5rem; 
     gap: 1.6rem;
     top: 0;
-    /* @media (min-width: ${breakpoints.large}) {
-        padding: 0;
-} */
 
 `;
 const ListText = styled.p`
@@ -231,7 +228,7 @@ const Picture = styled.img`
     border-radius: 24px;
     background: url(<path-to-image>), lightgray 50% / cover no-repeat;
     cursor: pointer;
-    :hover{
+    &:hover{
         border:  2px solid rgba(255, 126, 27, 1);
     }
     @media (min-width: ${breakpoints.large}) {

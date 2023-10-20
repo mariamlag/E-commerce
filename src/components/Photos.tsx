@@ -75,7 +75,7 @@ const Images = styled.img`
     height: 88px;
     flex-shrink: 0;
     border-radius: 10px;
-    :hover{
+    &:hover{
         border-radius: 10px;
         border: 2px solid #FF7E1B;
         opacity: 0.5;

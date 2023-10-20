@@ -102,7 +102,7 @@ const OrangeButton = styled.button`
     font-weight: 700;
     line-height: normal;
     margin-top: 1.6rem;
-    :hover {
+    &:hover {
         opacity: 0.75;
     }
     @media (min-width: ${breakpoints.large}) {
