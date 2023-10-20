@@ -21,10 +21,10 @@ export default function Header({ quant, setQuant }: HeaderProps) {
         <>
         <Body>
             <BurgerLogoDiv>
-                <BurgerIcon src="../../public/assets/images/icon-menu.svg"
+                <BurgerIcon src="/assets/images/icon-menu.svg"
                 onClick={ () => setBurgerMenu(!burgerMenu)}>
                 </BurgerIcon>
-                <Logo src='../../public/assets/images/logo.svg'>
+                <Logo src='/assets/images/logo.svg'>
 
                 </Logo>
                 <List>
@@ -44,21 +44,21 @@ export default function Header({ quant, setQuant }: HeaderProps) {
             
           
             <CardImgDiv>
-                    <Card src="../../public/assets/images/icon-cart.svg"
+                    <Card src="/assets/images/icon-cart.svg"
                     onClick={toggleCart}>
                     
                     </Card>
                     {isCartVisible && <Cart quant={quant} setQuant={setQuant}/>}
            
                     <Number>{quant}</Number>
-                    <Picture src="../../public/assets/images/image-avatar.png">
+                    <Picture src="/assets/images/image-avatar.png">
 
                     </Picture>
             </CardImgDiv>
 
         </Body>
         {burgerMenu && <BurgerMenu >
-                <BurgerClose  src="../../public/assets/images/icon-close.svg"
+                <BurgerClose  src="/assets/images/icon-close.svg"
                 onClick={ () => setBurgerMenu(!burgerMenu)}>
                 </BurgerClose>
                 {navigate.map((item, index) => {
