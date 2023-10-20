@@ -59,11 +59,11 @@ export default function Item ({ setQuant }: ItemProps) {
             <ButParent>
                 <ButtonDiv>
                     <Button onClick={handleDecrement}>
-                        <img src="../../public/assets/images/icon-minus.svg" alt="" />
+                        <img src="/assets/images/icon-minus.svg" alt="" />
                     </Button>
                     <Span>{quantity}</Span>
                     <Button onClick={handleIncrement}>
-                        <img src="../../public/assets/images/icon-plus.svg" alt="" />
+                        <img src="/assets/images/icon-plus.svg" alt="" />
                     </Button>
                 </ButtonDiv>
                 <OrangeButton onClick={handlePlus}>
