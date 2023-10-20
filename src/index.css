@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+#root{  
+  min-width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 20px;
+  overflow-x: hidden;
+
+  @media (min-width: 1440px) {
+    padding: 28px 165px 132px; }
+} 
+ body{
+  overflow-x: hidden;
+
+ }
+
+
