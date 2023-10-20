@@ -1,4 +1,3 @@
-import React from "react";
 import Item from "./components/Item";
 import Header from "./components/Header";
 import { useState } from "react";
@@ -15,6 +14,7 @@ console.log(popup)
      
      <Header quant={quant} setQuant={setQuant} />
      <Photos popup={false} setPopup={setPopup} />
+     
      {popup ? <BlackDiv> <Photos popup={true} setPopup={setPopup} /> </BlackDiv> : null}
     
       <Item setQuant={setQuant} />
