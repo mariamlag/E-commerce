@@ -79,6 +79,10 @@ const Svg = styled.img`
     flex-shrink: 0;
     float: inline-end;
     cursor: pointer;
+    &:hover{
+        transform: scale(1.1); 
+        transition: background-color 0.3s, color 0.3s, transform 0.2s; 
+    }
 `
 const Img = styled.img`
     width: 5rem;

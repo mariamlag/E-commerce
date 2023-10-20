@@ -175,12 +175,22 @@ const ListText = styled.p`
     font-weight: 700;
     line-height: 2.6rem; 
     cursor: pointer;
-
+    &:hover {
+        color: #d66d18;
+    }
    
 `
 const BurgerDivIn = styled.div`
     display: flex;
     flex-direction: column;
+    &:hover {
+        
+        opacity: 0.55;
+        
+        transition: background-color 0.3s, color 0.3s, transform 0.2s; 
+    
+    
+    }
 `
 const BurgerLogoDiv = styled.div`
     display: flex;
@@ -224,6 +234,10 @@ const Card = styled.img`
     width: 2.1rem;
     height: 2rem;
     cursor: pointer;
+    &:hover{
+        transform: scale(1.1); 
+        transition: background-color 0.3s, color 0.3s, transform 0.2s; 
+    }
 `
 const Picture = styled.img`
     width: 2.4rem;
@@ -246,4 +260,8 @@ const BurgerClose = styled.img`
     height: 1.3rem;
     margin-bottom: 3rem;
     cursor: pointer;
+    opacity: 0.55;
+        
+        transition: background-color 0.3s, color 0.3s, transform 0.2s; 
+    
 `
